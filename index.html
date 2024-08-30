@@ -1,0 +1,338 @@
+<html>
+
+<head>
+    <title>Elektro Ormari - Maximus</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/extra-offers.js"></script>
+    <script src="js/numberCounter.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="js/mail-sender.js"></script>
+</head>
+
+<body onload="initScroll(); initHeader(); initSlideshow(); initExtraOffers(); initNumberCounter(); initMailSender();"
+    onscroll="handleScroll()">
+    <header>
+        <div id="header-global">
+            <div id="header-name">
+                <img src="images/logo.jpg">
+                <h1>ELEKETRO ORMARI<p>Brzo, kvalitetno i povoljno.</p></h1>
+            </div>
+            <nav id="header-websites-navigation">
+                <a href="https://maximuswebrs.github.io/GlavniPortal">
+                    Glavni Portal
+                </a>
+                <a href="https://maximuswebrs.github.io/ElektroInstalacije">
+                    Elektro Instalacije
+                </a>
+                <a href="https://maximuswebrs.github.io/VrataMetalDetektor">
+                    Vrata Metal Detektor
+                </a>
+                <a href="https://maximuswebrs.github.io/DojavaPozara">
+                    Protiv Požarni Sistemi
+                </a>
+                <a href="https://maximuswebrs.github.io/VideoNadzor">
+                    Video Nadzor
+                </a>
+                <a href="https://maximuswebrs.github.io/AlarmniSistemi">
+                    Alarmni Sistemi
+                </a>
+            </nav>
+            <div id="header-websites-menu-button">
+                <img id="header-websites-menu-open" class="active" src="images/icons/globe.webp">
+                <img id="header-websites-menu-close" class="inactive" src="images/icons/x-white.webp">
+            </div>
+            <nav id="header-websites-menu">
+                <a href="https://maximuswebrs.github.io/GlavniPortal">
+                    Glavni Portal
+                </a>
+                <a href="https://maximuswebrs.github.io/ElektroInstalacije">
+                    Elektro Instalacije
+                </a>
+                <a href="https://maximuswebrs.github.io/VrataMetalDetektor">
+                    Vrata Metal Detektor
+                </a>
+                <a href="https://maximuswebrs.github.io/DojavaPozara">
+                    Protiv Požarni Sistemi
+                </a>
+                <a href="https://maximuswebrs.github.io/VideoNadzor">
+                    Video Nadzor
+                </a>
+                <a href="https://maximuswebrs.github.io/AlarmniSistemi">
+                    Alarmni Sistemi
+                </a>
+            </nav>
+        </div>
+        <nav id="page-navigation" data-scroll-fixed>
+            <a data-page-scroll-target="header" class="active">
+                POČETAK</a>
+            <a data-page-scroll-target="#offer" class="inactive" data-page-scroll-offset="40">
+                ORMARI</a>
+            <a data-page-scroll-target="#extra-offers" class="inactive" data-page-scroll-offset="60">
+                NAŠA PONUDA</a>
+            <a data-page-scroll-target="footer" class="inactive" data-page-scroll-offset="60">
+                KONTAKT</a>
+            <div id="page-navigation-menu-button">
+                <img id="page-navigation-menu-open" class="active" src="images/icons/triangle-red-down.webp">
+                <img id="page-navigation-menu-close" class="inactive" src="images/icons/triangle-up.webp">
+            </div>
+            <nav id="page-navigation-menu">
+                <a data-page-scroll-target-peripheral="header">
+                    POČETAK</a>
+                <a data-page-scroll-target-peripheral="#offer">
+                    ORMARI</a>
+                <a data-page-scroll-target-peripheral="#extra-offers">
+                    NAŠA PONUDA</a>
+                <a data-page-scroll-target-peripheral="footer">
+                    KONTAKT</a>
+            </nav>
+        </nav>
+    </header>
+    <section id="slideshow">
+        <div id="slideshow-images">
+            <picture class="active">
+                <source srcset="images/slideshow/slideshow-cabinets-vertical.webp" media="(max-width: 800px)">
+                <source srcset="images/slideshow/slideshow-cabinets.webp" media="(min-width: 800px)">
+                <img src="images/slideshow/slideshow-cabinets.webp">
+            </picture>
+        </div>
+        <div id="slideshow-images-dragger" draggable="true"></div>
+        <div id="slideshow-controls">
+        </div>
+    </section>
+    <section id="manufacturers" class="scroller-w-images">
+        <h1>PROIZVOĐAČI U NAŠOJ POUNDI</h1>
+        <div id="manufacturers-wrapper" class="wrapper inactive" data-horizontal-scroller="15000ms">
+            <a><img src="images/manufacturers/schneider-electric.png"></a>
+            <a><img src="images/manufacturers/feman.webp"></a>
+            <a><img src="images/manufacturers/iskra.webp"></a>
+            <a><img src="images/manufacturers/eti.webp"></a>
+            <a><img src="images/manufacturers/obbo.webp"></a>
+            <a><img src="images/manufacturers/schneider-electric.png"></a>
+            <a><img src="images/manufacturers/feman.webp"></a>
+            <a><img src="images/manufacturers/iskra.webp"></a>
+            <a><img src="images/manufacturers/eti.webp"></a>
+            <a><img src="images/manufacturers/obbo.webp"></a>
+        </div>
+    </section>
+    <section id="offer">
+        <article class="right">
+            <h2>SRCE VAŠE ELEKTRIČNE INSTALACIJE</h2>
+            <p>
+                Distributivni ormari su ključni element svake električne instalacije. 
+                Služe za sigurnu i efikasnu raspodelu električne energije unutar objekta. 
+                U njima se nalaze različiti električni elementi kao što su prekidači, 
+                osigurači i merni instrumenti koji štite električnu instalaciju i 
+                omogućavaju kontrolu potrošnje električne energije. 
+                Pravilno odabrani i instalirani distributivni ormari su garancija 
+                za siguran i neometan rad svih električnih uređaja u objektu.
+                <br><br>
+                Naša firma se ponosi visokim kvalitetom izrade elektro ormara. 
+                Svaki naš proizvod je rezultat dugogodišnjeg iskustva i upotrebe najsavremenijih tehnologija.
+            </p>
+            <a data-page-scroll-target-peripheral="footer">POŠALJITE UPIT ZA CENE</a>
+            <img src="images/offers/cabinets.webp" class="inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-multi" data-screen-enter-scroll-offset="200">
+        </article>
+    </section>
+    <section id="achievements">
+        <h2>Naša dostignuća</h2>
+        <div id="achievements-showcase">
+            <div class="achievement-showcase inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-once" data-screen-enter-scroll-offset="100">
+                <div class="image-wrapper">
+                    <img src="images/icons/building.png">
+                </div>
+                <h3>Aktivni projekti</h3>
+                <p data-number-counter-target="750" data-number-counter-duration="5000" data-number-counter-observe-target="parent"></p>
+            </div>
+            <div class="achievement-showcase inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-once" data-screen-enter-scroll-offset="100">
+                <div class="image-wrapper">
+                    <img src="images/icons/handshake.png">
+                </div>
+                <h3>Zadovoljnih klijentata</h3>
+                <p data-number-counter-target="2543" data-number-counter-duration="5000" data-number-counter-observe-target="parent"></p>
+            </div>
+            <div class="achievement-showcase inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-once" data-screen-enter-scroll-offset="100">
+                <div class="image-wrapper">
+                    <img src="images/icons/group.png">
+                </div>
+                <h3>Zaposleno radnika</h3>
+                <p data-number-counter-target="25" data-number-counter-duration="3000" data-number-counter-observe-target="parent"></p>
+            </div>
+            <div class="achievement-showcase inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-once" data-screen-enter-scroll-offset="100">
+                <div class="image-wrapper">
+                    <img src="images/icons/certificates.png">
+                </div>
+                <h3>Sertifikati</h3>
+                <p data-number-counter-target="14" data-number-counter-duration="3000" data-number-counter-observe-target="parent"></p>
+            </div>
+        </div>
+    </section>
+    <section id="extra-offers">
+        <h2>ŠTA VAM NUDIMO</h2>
+        <div id="extra-offers-wrapper">
+            <article>
+                <h2>Distributivni ormari</h2>
+                <a>Pročitaj jos...</a>
+                <img src="images/extra offers/monitoring.webp">
+                <p>
+                    Distributivni elektro ormari su ključni element svakog električnog sistema. 
+                    Oni osiguravaju siguran i neprekidni dovod električne energije do potrošača. 
+                    Pravilno projektovani i održavani distributivni ormari su garancija za bezbedan 
+                    i efikasan rad svih električnih uređaja u objektu.
+                </p>
+            </article>
+            <article>
+                <h2>Komandni ormari</h2>
+                <a>Pročitaj jos...</a>
+                <img src="images/extra offers/monitoring.webp">
+                <p>
+                    Komandni elektro ormari su centralno mesto za upravljanje i kontrolu 
+                    različitih električnih uređaja i procesa. U njima se nalaze kontroleri, 
+                    releji, senzori i druga električna oprema koja omogućuje automatsko 
+                    ili ručno upravljanje električnim sistemima.
+                </p>
+            </article>
+            <article>
+                <h2>Energetski ormari</h2>
+                <a>Pročitaj jos...</a>
+                <img src="images/extra offers/monitoring.webp">
+                <p>
+                    Energetski elektro ormari su prva tačka dodira električne energije sa objektom. 
+                    Oni služe za prihvat električne energije iz spoljnog izvora, njeno merenje, 
+                    zaštitu i dalju distribuciju do potrošača unutar objekta.
+                </p>
+            </article>
+            <article>
+                <h2>Elektro instalacije</h2>
+                <a>Pročitaj jos...</a>
+                <img src="images/extra offers/monitoring.webp">
+                <p>
+                    Osim što izrađujemo razvodne ormare svih vrsta, nudimo i kompletnu uslugu elektroinstalacija. 
+                    Naši stručnjaci izvodiće sve potrebne radove, od projektovanja do izvođenja, 
+                    kako bi Vaša električna instalacija bila sigurna i funkcionalna.
+                </p>
+            </article>
+        </div>
+        <div id="extra-offers-preview">
+            <img>
+            <article>
+                <h2></h2>
+                <p></p>
+            </article>
+            <div id="extra-offers-preview-close" onclick="hideExtraOfferPreview()"><img src="images/icons/x.png"></div>
+        </div>
+    </section>
+    <section id="partners" class="scroller-w-images">
+        <h1>NAŠI SARADNICI</h1>
+        <hr>
+        <div id="partners-wrapper" class="wrapper inactive" data-horizontal-scroller="15000ms">
+            <a><img src="images/partners/metalflex.webp"></a>
+            <a><img src="images/partners/antenall.png"></a>
+            <a><img src="images/partners/tehnoplast.webp"></a>
+            <a><img src="images/partners/metalflex.webp"></a>
+            <a><img src="images/partners/antenall.png"></a>
+            <a><img src="images/partners/tehnoplast.webp"></a>
+            <a><img src="images/partners/metalflex.webp"></a>
+            <a><img src="images/partners/antenall.png"></a>
+            <a><img src="images/partners/tehnoplast.webp"></a>
+        </div>
+    </section>
+    <footer>
+        <form onsubmit="sendMail(event);" method="post">
+            <h1>
+                Pošaljite upit
+            </h1>
+            <hr>
+            <div id="form-selectors">
+                <div id="form-selectors-offer">
+                    <h2>Tip objekta</h2>
+                    <div class="wrapper">
+                        <input type="radio" id="form-selector-offer-residential" name="offer" value="Stambeni" checked>
+                        <label for="form-selector-offer-residential">Stambeni</label><br>
+                        <input type="radio" id="form-selector-offer-commercial" name="offer" value="Komercijalni">
+                        <label for="form-selector-offer-commercial">Komercijalni</label><br>
+                        <input type="radio" id="form-selector-offer-industrial" name="offer" value="Industrijski">
+                        <label for="form-selector-offer-industrial">Industrijski</label><br>
+                        <input type="radio" id="form-selector-offer-household" name="offer" value="Kuća">
+                        <label for="form-selector-offer-household">Kuća</label><br>
+                    </div>
+                </div>
+                <div id="form-selectors-extra">
+                    <h2>Usluge</h2>
+                    <div class="wrapper" required>
+                        <input type="checkbox" id="form-selector-extra-installation" name="extra" value="Montaža"
+                            checked>
+                        <label for="form-selector-extra-installation">Montaža</label><br>
+
+                        <input type="checkbox" id="form-selector-extra-distribution" name="extra" value="Distributivni ormar">
+                        <label for="form-selector-extra-distribution">Distributivi ormar</label><br>
+
+                        <input type="checkbox" id="form-selector-extra-command" name="extra" value="Komandni ormar">
+                        <label for="form-selector-extra-command">Komandni ormar</label><br>
+
+                        <input type="checkbox" id="form-selector-extra-energy" name="extra" value="Energetski ormar">
+                        <label for="form-selector-extra-energy">Energetski ormar</label><br>
+                    </div>
+                </div>
+            </div>
+            <label for="form-desc">Napomena: </label>
+            <textarea rows="3" id="form-desc" maxlength="200"></textarea>
+            <label for="form-name">Ime, prezime: </label>
+            <input type="text" required id="form-name">
+            <label for="form-phone">Kontakt telefon: </label>
+            <input type="tel" required id="form-phone">
+            <label for="form-email">E-mail adresa: </label>
+            <input type="email" required id="form-email">
+            <input type="submit" id="form-submit" value="Pošalji">
+        </form>
+        <section id="footer-about">
+            <h2>O NAMA</h2>
+            <p>
+                Sa dugogodišnjim iskustvom u oblasti elektroenergetike, 
+                Maximus Global Technology je postao sinonim za kvalitet 
+                i pouzdanost u izradi elektro ormara. Koristeći najsavremenije 
+                tehnologije i materijale, garantujemo da će naši proizvodi zadovoljiti i najviše standarde.
+            </p>
+            <section id="footer-contact">
+                <h2>KONTAKT</h2>
+                <a href="mailto:maximus.security@gmail.com" id="footer-contact-mail">maximus.secure@gmail.com</a>
+                <a href="tel:+38162421515" id="footer-contact-phone">+381/62-421-515</a>
+                <a href="https://maps.app.goo.gl/EcN9rNwpMbKkXXKz7" id="footer-contact-location">Cara Dušana 150</a>
+            </section>
+        </section>
+        <nav id="footer-websites">
+            <h2>NAŠA REŠENJA</h2>
+            <a href="https://maximuswebrs.github.io/GlavniPortal">
+                Glavni Portal
+            </a>
+            <a href="https://maximuswebrs.github.io/ElektroInstalacije">
+                Elektro Instalacije
+            </a>
+            <a href="https://maximuswebrs.github.io/VrataMetalDetektor">
+                Vrata Metal Detektor
+            </a>
+            <a href="https://maximuswebrs.github.io/DojavaPozara">
+                Protiv Požarni Sistemi
+            </a>
+            <a href="https://maximuswebrs.github.io/VideoNadzor">
+                Video Nadzor
+            </a>
+            <a href="https://maximuswebrs.github.io/AlarmniSistemi">
+                Alarmni Sistemi
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
