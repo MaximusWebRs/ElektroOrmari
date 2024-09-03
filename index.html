@@ -13,11 +13,16 @@
     content='Nudimo širok asortiman usluga, od proizvodnje elektro ormara 
     po narudžbi do izvođenja elektro energetskih instalacija. Naši kvalitetni 
     distributivni, energetski i komandni ormari će unaprediti Vaše projekte.'>
+    <meta name="keywords"
+    content="elektro ormari, električni ormari, razvodne kutije, 
+    električna oprema, elektroinstalacije, industrijska automatizacija, 
+    elektroenergetika, elektrodistribucija, elektropojektovanje, 
+    elektro ormar po meri, elektro ormar katalog, elektro ormar prodaja, 
+    kupi elektro ormar, cena elektro ormara">
 
     <link href="css/index.css" rel="stylesheet">
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/slideshow.js"></script>
     <script src="js/extra-offers.js"></script>
     <script src="js/numberCounter.js"></script>
     <script src="
@@ -28,7 +33,7 @@ https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
     <script src="js/mail-sender.js"></script>
 </head>
 
-<body onload="initScroll(); initHeader(); initSlideshow(); initExtraOffers(); initNumberCounter(); initMailSender();"
+<body onload="initScroll(); initHeader(); initExtraOffers(); initNumberCounter(); initMailSender();"
     onscroll="handleScroll()">
     <header>
         <div id="header-global">
@@ -106,17 +111,7 @@ https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
             </nav>
         </nav>
     </header>
-    <section id="slideshow">
-        <div id="slideshow-images">
-            <picture class="active">
-                <source srcset="images/slideshow/slideshow-cabinets-vertical.webp" media="(max-width: 800px)">
-                <source srcset="images/slideshow/slideshow-cabinets.webp" media="(min-width: 800px)">
-                <img src="images/slideshow/slideshow-cabinets.webp">
-            </picture>
-        </div>
-        <div id="slideshow-images-dragger" draggable="true"></div>
-        <div id="slideshow-controls">
-        </div>
+    <section id="page-top">
     </section>
     <section id="manufacturers" class="scroller-w-images">
         <h1>PROIZVOĐAČI U NAŠOJ POUNDI</h1>
@@ -149,7 +144,7 @@ https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
                 Svaki naš proizvod je rezultat dugogodišnjeg iskustva i upotrebe najsavremenijih tehnologija.
             </p>
             <a data-page-scroll-target-peripheral="footer">POŠALJITE UPIT ZA CENE</a>
-            <img src="images/offers/cabinets.webp" class="inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-multi" data-screen-enter-scroll-offset="200">
+            <img src="images/offers/cabinets.webp" class="inactive" data-screen-enter-scroll data-screen-enter-scroll-mode="show-multi" data-screen-enter-scroll-offset="-200">
         </article>
     </section>
     <section id="achievements">
